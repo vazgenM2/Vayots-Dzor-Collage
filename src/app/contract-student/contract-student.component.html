@@ -1,0 +1,11 @@
+<div class="mn-container">
+    <p class="mn-t3">Պայմանագրեր ուսանողի հետ</p>
+    <hr class="mn-hr">
+
+    <section>
+        <p class="download">Բեռնել</p>
+        <a class="download-p" *ngFor="let file of files['contract-students']" [href]="file.link" target="_blank"> {{
+            file.name }} <span class="span"><img class="span-img" src="./assets/download.png" width="20px"
+                    height="20px"></span> </a>
+    </section>
+</div>

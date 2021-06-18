@@ -1,0 +1,14 @@
+
+<div class="mn-container">
+    <p class="mn-t3">Աշխատանքային խմբեր</p>
+    <hr class="mn-hr">
+    
+    <section>
+    <p class="download">Բեռնել</p>
+    <a class="download-p" *ngFor="let file of files['working-groups']"  [href]="file.link" target="_blank"> {{ file.name }} <span class="span"><img  class="span-img" src="./assets/download.png" width="20px" height="20px"></span> </a>
+    
+    <!-- <p class="download-p">Արտաքին կապերի համար պատասխանատու աշխ․ խմբի նպ․ ու գործառույթները <span class="span"><img  class="span-img" src="./assets/download.png" width="20px" height="20px"></span></p> -->
+    <!-- <p class="download-p">Աշխատանքային խմբի կազմը <span class="span"><img  class="span-img" src="./assets/download.png" width="20px" height="20px"></span></p> -->
+
+    </section>
+</div>

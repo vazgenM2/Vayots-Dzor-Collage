@@ -1,0 +1,75 @@
+<div class="mn-container">
+    <p class="mn-t3">Հետադարձ կապ</p>
+    <hr class="mn-hr">
+    <form action="feedback" class="mn-form" [formGroup]="form" (ngSubmit)="sendEmail($event)">
+        <div class="form-item">
+            <label for="from_name">Կոնտակտային անուն</label>
+            <input name="from_name" #name formControlName='fname' type="text" class="mn-inp" id="name"
+                placeholder="Գրել անուն">
+        </div>
+        <p *ngIf="form.get('fname').invalid && form.get('fname').touched">
+            <small class="red">Մուտքագրել անուն</small>
+        </p>
+        <div class="form-item">
+            <label for="phone_num">Հեռախոսահամար</label>
+            <input name="phone_num" #phone_num formControlName='fphone' type="text" class="mn-inp" id="phone_num"
+                placeholder="Գրել հեռախոսահամար">
+        </div>
+        <p *ngIf="form.get('fphone').errors?.required && form.get('fphone').touched">
+            <small class="red">Մուտքագրել հեռախոսահամար</small>
+        </p>
+        <p
+            *ngIf="form.get('fphone').errors?.pattern || form.get('fphone').errors?.minlength  && form.get('fname').touched">
+            <small class="red">Գրել ճիշտ (Օրինակ՝ +374xxxxxxxx)</small>
+        </p>
+
+        <div class="form-item">
+            <label for="email">Էլ. փոստ</label>
+            <input name="email" type="text" #email formControlName='femail' class="mn-inp" id="email"
+                placeholder="Գրել էլ. հասցե">
+        </div>
+        <p *ngIf="form.get('femail').errors?.required && form.get('femail').touched">
+            <small class="red">Մուտքագրել էլ. հասցե</small>
+        </p>
+        <p *ngIf="form.get('femail').errors?.email && form.get('femail').touched">
+            <small class="red">Մուտքագրել ճիշտ էլ. հասցե</small>
+        </p>
+
+
+        <div class="form-item">
+            <label for="subject">Վերնագիր</label>
+            <input name="subject" type="text" #subject formControlName='ftitle' class="mn-inp" id="subject"
+                placeholder="Գրել վերնագիր">
+        </div>
+        <p *ngIf="form.get('ftitle').errors?.required && form.get('ftitle').touched">
+            <small class="red">Մուտքագրել վերնագիր</small>
+        </p>
+
+        <div class="form-item">
+            <label for="message">Հաղորդագրություն</label>
+            <textarea name="message" #text formControlName='ftext' id="" cols="22" rows="6" class="mn-textarea" id="msg"
+                placeholder="Գրել ինչ-որ տեքստ"></textarea>
+        </div>
+        <p *ngIf="form.get('ftext').errors?.required && form.get('ftext').touched">
+            <small class="red">Մուտքագրել հաղորդագրություն</small>
+        </p>
+
+        <p class="thankyou" #thankyou>Շնորհակալ ենք ձեր նամակի համար</p>
+        <p class="wrongform red" #wrongform style="display: none;">Ճիշտ լրացրեք տվյալները</p>
+        <div class="form-btns">
+            <button class="submit" type="submit">Ուղարկել</button>
+        </div>
+    </form>
+</div>
+
+<div class="agmDiv">
+    <img src="../assets/map (2).jpg" alt="">
+    <!-- <agm-map [latitude]="lat" [longitude]="lng"  [zoom]="zoom">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>    -->
+</div>
+
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpKEwZkICP7L4D-GBbIFJ_coqsq0sRqRA&callback=initMap&libraries=&v=weekly">
+    </script>

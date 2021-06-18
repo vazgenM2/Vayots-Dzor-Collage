@@ -1,0 +1,68 @@
+<div class="mn-container">
+    <div class="mn-start">
+        <p class="mn-t2">Կայուն կրթություն, հուսալի ապագա</p>
+        <hr class="mn-hr">
+        <p class="mn-t3">ՀՀ Կրթության և գիտության նախարարության վայոց ձորի տարածաշրջանային պետական քոլեջում
+            ուսուցանվող մասնագիտությունների ցանկը</p>
+    </div>
+    <section class="section">
+        <p class="mn-t1 mn-t0">Միջին մասնագիտական կրթություն</p>
+        <table class="table">
+            <tr>
+                <th>հ/հ</th>
+                <th>Դասիչը</th>
+                <th>Մասնագիտության անվանումը</th>
+                <th>Կրթության հիմքը</th>
+                <th>Ուսման տևողությունը</th>
+            </tr>
+            <tr *ngFor="let item of middleprofession; let idx = index">
+                <th>{{ idx + 1 }}</th>
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.base.join(', ') }}</td>
+                <td>{{ item.time.join(', ') }}</td>
+            </tr>
+        </table>
+    </section>
+    <section class="section">
+        <p class="mn-t1 mn-t0">Նախնական/արհեստագործական կրթություն</p>
+        <table class="table">
+            <tr>
+                <th>հ/հ</th>
+                <th>Դասիչը</th>
+                <th>Մասնագիտության անվանումը</th>
+                <th>Կրթության հիմքը</th>
+                <th>Ուսման տևողությունը</th>
+            </tr>
+            <tr *ngFor="let item of prevprofession; let idx = index">
+                <th>{{ idx + 1 }}</th>
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.base.join(', ') }}</td>
+                <td>{{ item.time.join(', ') }}</td>
+            </tr>
+        </table>
+    </section>
+    <section class="section">
+        <p class="mn-t3">Կրթական լրացուցիչ ծրագրեր</p>
+        <div style="max-width: 70%; margin: 0px auto;">
+            <p class="mn-t1 italic" style="text-transform: uppercase;">
+                ՊԱՀԱՆՋԱՐԿԻ ԴԵՊՔՈՒՄ ՔՈԼԵՋԸ ԿԱՐՈՂ Է ԻՐԱԿԱՆԱՑՆԵԼ ԼՐԱՑՈՒՑԻՉ ՈՒՍՈՒՑՈՒՄ ԵՎ  ԴԱՍԸՆԹԱՑՆԵՐ ՀԵՏԵՎՅԱԼ ՄԱՍՆԱԳԻՏՈՒԹՅՈՒՆՆԵՐԻ ԳԾՈՎ
+            </p>
+        </div>
+        <ul class="ol">
+            <li>Կար և մոդելավորում</li>
+            <li>Վարսահարդարում</li>
+            <li>Սեղանի ձևավորում</li>
+            <li>Խոհարարություն</li>
+            <li>Հրուշակագործություն</li>
+            <li>Վարորդական  դասընթացներար</li>
+            <li>Համակարգչային օպերատորություն</li>
+            <li>Փայտի գեղարվեստական մշակում</li>
+            <li>Քարի գեղարվեստական մշակում</li>
+            <li>Հաշվապահական ծրագրերի ուսուցում</li>
+            <li>Գինեգործություն և հյութերի արտադրություն</li>
+            <li>Ժամանակակից ավտոմոբիլների  տեխնիկական սպասարկում և նորոգում (ախտորոշում)</li>
+        </ul>
+    </section>
+</div>

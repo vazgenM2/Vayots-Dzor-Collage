@@ -1,0 +1,23 @@
+.error-div {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    h1 {
+        color: red;
+        font-size: 38px;
+        text-align: center;
+        padding: 0 5%;
+        @media(max-width:600px){
+            font-size: 26px;
+        }
+    }
+    a {
+        color: red;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@media (max-width: 380px) {
+    .floatparent {
+        display: flex;
+        justify-content: center;
+        img.floatimg {
+            float: none;
+            width: 50%; 
+            margin: 0px;
+            margin-right: 0px !important;       
+        }
+    }
+    .ol {
+        padding-left: 15px;
+    }
+}
+
+.img {
+    border-radius: 0px;
+}

@@ -1,0 +1,18 @@
+<div class="mn-container">
+    <p class="mn-t3">Գրադարան</p>
+    <hr class="mn-hr">
+ 
+    <section>
+        <p class="mn-t2">Օգտակար հղումներ</p>
+        <p class="italic">Էլեկտրոնային գրքեր, աուդիոգրքեր, դասընթացներ, ամսագրեր և ոչ միայն...</p>
+        <p class="mn-text mn-mtop">ՎՁՏՊ քոլեջի Գրադարան բաժնում  ներառվել են հղումներ, որոնք հնարավորություն կտան բեռնել անհրաժեշտ գրքեր, ինչպես նաև ունկնդրել կամ ընթերցել գրքերի օնլայն տարբերակները: Ներկայացված ցանկը ժամանակ առ  ժամանակ կարող է փոփոխվել կամ համալրվել:</p>
+
+        <table class="table">
+            <tr *ngFor="let item of sitesArr; let idx = index">
+                <th>{{ idx + 1 }}</th>
+                <td> <a class="mn-link italic" target="_blank" [href]="item.link">{{ item.site }}</a> </td>
+                <td> {{ item.text }} </td>
+            </tr>
+        </table>
+    </section>
+</div>

@@ -1,0 +1,20 @@
+<div class="mn-container">
+    <p class="mn-t3">Վարչական անձնակազմ</p>
+    <hr class="mn-hr">
+    
+    <section>
+        <table class="table">
+            <tr>
+                <th>հ/հ</th>
+                <th>Հաստիքի անվանումը</th>
+                <th>Անուն , ազգանուն, հայրանուն</th>
+            </tr>
+            <tr *ngFor="let item of adminArr; let idx = index">
+                <th> {{ idx + 1 }} </th>
+                <td> {{ item.name }} </td>
+                <td> {{ item.person }} </td>
+            </tr>
+        </table>
+    </section>
+
+</div>

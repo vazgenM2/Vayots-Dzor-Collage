@@ -1,0 +1,64 @@
+$color: rgb(207, 212, 233);
+$color2: rgb(80, 113, 221);
+$color3: rgb(93, 125, 228);
+$nav-color: #6381e4;
+$c: rgb(73, 107, 221);
+$dcolor: rgb(20, 68, 140);
+$ddcolor: rgb(13, 47, 99);
+$c2: rgb(94, 120, 206);
+$text-color: rgb(210, 214, 230);
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+app-header {
+    justify-self: flex-start;
+}   
+.site-body {
+    flex: 1 1 auto;
+}
+.site-body::after {
+    content: '';
+    display: block;
+    height: auto !important;
+}
+app-footer {
+    display: fixed;
+    bottom: 0;
+    justify-content: flex-end;
+}
+.totop {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(62, 54, 109, 0.562);
+    font-size: 35px;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid rgba(20, 9, 44);
+    cursor: pointer;
+    transition: all ease 0.8s;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    p {
+        transform: rotate(-90deg);
+        margin-right: 5px;
+    }
+    &:hover {
+        background-color: rgba(103, 96, 121, 0.3);
+    }
+    @media(max-width:600px){
+        width: 45px;
+        bottom: 20px;
+        right: 20px;
+        height: 45px;
+        font-size: 24px;
+    }
+
+}

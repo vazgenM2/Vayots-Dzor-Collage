@@ -1,0 +1,36 @@
+section {
+    padding: 10px;
+    img {
+        float: left;
+        margin-right: 20px ;
+    }
+}
+.mn-container {
+    max-width: 1000px;
+}
+.mn-part-parent {
+    p {
+        margin-top: 50px;
+    }
+}
+.img2 {
+    width: 500px;
+}
+
+@media (max-width: 450px) {
+    .floatparent {
+        display: flex;
+        justify-content: center;
+        img.floatimg {
+            float: none;
+            width: 90%; 
+            margin: 0px;
+            margin-right: 0px !important;       
+        }
+    }
+    .img2 {
+        margin-right: 0px !important;
+        width: 80%;
+    }
+}
+        

@@ -1,0 +1,17 @@
+<div class="mn-container">
+    <p class="mn-t3">Ուսանող</p>
+    <hr class="mn-hr">
+    
+    <section>
+    <p class="download">Բեռնել</p>
+    <a class="download-p" *ngFor="let file of files['student']"  [href]="file.link" target="_blank"> {{ file.name }} <span class="span"><img  class="span-img" src="./assets/download.png" width="20px" height="20px"></span> </a>
+
+    <!-- <p class="download-p">«Վայոց Ձորի տարածաշրջանային պետական քոլեջ» ՊՈԱԿ-ի ուսանողի ուղեցույց <span class="span"><img  class="span-img" src="./assets/download.png" width="20px" height="20px"></span></p>  -->
+    <!-- <p class="download-p">Քոլեջի ուսանողների իրավունքներն ու պարտականությունները <span class="span"><img  class="span-img" src="./assets/download.png" width="20px" height="20px"></span></p>     -->
+    <!-- <p class="download-p">Ուսանողների կողմից օգտագործվող ռեսուրսներ <span class="span"><img  class="span-img" src="./assets/download.png" width="20px" height="20px"></span></p> -->
+    <!-- <p class="download-p">Վարձավճարի զեղչից օգտվող ուսանողների անվանացանկ 2020 <span class="span"><img  class="span-img" src="./assets/download.png" width="20px" height="20px"></span></p> -->
+    <!-- <p class="download-p">Վարձավճարի զեղչից օգտվող ուսանողների անվանացանկ 2019 <span class="span"><img  class="span-img" src="./assets/download.png" width="20px" height="20px"></span></p> -->
+    <!-- <p class="download-p">Վարձավճարի զեղչից օգտվող ուսանողների անվանացանկ 2018 <span class="span"><img  class="span-img" src="./assets/download.png" width="20px" height="20px"></span></p> -->
+    <!-- <p class="download-p">Տեղեկատվություն ուսանողների վարձավճարների և կիրառվող զեղչային համակարգերի վերաբերյալ <span class="span"><img  class="span-img" src="./assets/download.png" width="20px" height="20px"></span></p> -->
+    </section>
+</div>

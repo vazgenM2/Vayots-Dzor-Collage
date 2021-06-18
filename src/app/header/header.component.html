@@ -1,0 +1,174 @@
+<header>
+    <img src="./assets/logo.png" routerLink='/' alt="" class="logo toGeneral">
+    <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
+        <p class="title generalTitle lng-title toGeneral" routerLink='/' routerLinkActive="router-link-active">Վայոց
+            ձորի
+            տարածաշրջանային պետական քոլեջ</p>
+        <p class="title generalTitle entitle" [style.display]="showEnLang?'block':'none'" routerLink='/'
+            style="font-size: 15px; display: none">Vayots Dzor Regional State Collage</p>
+    </div>
+    <p class="title miniTitle lng-minititle" routerLink='/'>ՎՁՏՊՔ</p>
+    <img src="./assets/arm_logo.gif" class="logo">
+</header>
+
+<div class="box">
+    <div class="socialmedia">
+        <a href="https://www.facebook.com/VayotsDzorRegionalStateCollege/?ref=bookmarks&_rdc=1&_rdr" target="_blank">
+            <img src="./assets/fb.png" alt="">
+        </a>
+        <a href="https://www.instagram.com/vayotsdzorreg.statecollege/?hl=ru" target="_blank">
+            <img src="./assets/instagram.png" alt="">
+        </a>
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank">
+            <img src="./assets/mail.png" alt="">
+        </a>
+        <a class="phone">
+            <img src="./assets/phone.png" class="phoneIcon" alt="">
+            <span class="phonenumber">/0281/ 2-53-75</span>
+        </a>
+
+    </div>
+    <div class="general">
+        <div class="language">
+            <ul class="langs">
+                <li class="active lang" data-value='hy'>Հայ</li>
+                <li class="lang" data-value='ru'>Рус</li>
+                <li class="lang en" data-value='en'>Eng</li>
+            </ul>
+        </div>
+        <div class="searchDiv">
+            <div class="search-parent">
+                <input type="text" class="search" #searchInp>
+                <ul class="values" #values>
+                    <p class="empty" #empty>0 արդյունք</p>
+                </ul>
+            </div>
+            <button class="searchbtn" #searchBtn>
+                <img class="btnimg" #btnImg
+                    src="https://icon-library.com/images/white-search-icon-transparent-background/white-search-icon-transparent-background-1.jpg">
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<nav>
+    <div class="container" [ngClass]="{'show': isMenu}">
+
+        <a class="search-item lng-home" routerLink='/' routerLinkActive='active'
+            [routerLinkActiveOptions]="{exact: true}">Գլխավոր</a>
+        <a class="search-item lng-profession" routerLink='/professions' routerLinkActive='active'>Մասնագիտություններ</a>
+        <li class="dropdown">
+            <a class="lng-edu_processes">Կրթական գործընթացներ</a>
+            <ul>
+                <li class="search-item lng-vocational" routerLink="/vocational-eduaction" routerLinkActive='active'>
+                    Արհեստագործական կրթություն</li>
+                <li class="dropdown">
+                    <a class="lng-edu_program">Կրթական ծրագրեր</a> <!-- search-item -->
+                    <ul>
+                        <li class="search-item lng-research_works" routerLink="/research-works"
+                            routerLinkActive='active'>Հետազոտական աշխատանքներ</li>
+                    </ul>
+                </li>
+                <li class="search-item lng-events" routerLink="/error" routerLinkActive='active'>Միջոցառումներ</li>
+                <li class="search-item lng-anushavan_visits" routerLink="/visits" routerLinkActive='active'>Քոլեջի
+                    հովանավոր Անուշավան Աբրահամյանի այցը քոլեջ</li>
+                <li class="search-item lng-alumni" routerLink="/alumni" routerLinkActive='active'>Շրջանավարտներ</li>
+                <li class="search-item lng-collaboration_programs" routerLink="/collaboration"
+                    routerLinkActive='active'>Համագործակցության ծրագրեր</li>
+                <li class="dropdown">
+                    <a class="lng-practice search-item" routerLink="/practice" routerLinkActive='active'>Պրակտիկա</a>
+                    <ul>
+                        <li class="search-item lng-internship_programs" routerLink="/intership-programs"
+                            routerLinkActive='active'>Պրակտիկաների ծրագրեր</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a class="lng-student search-item" routerLink="/student" routerLinkActive='active'>Ուսանող</a>
+            <ul>
+                <li class="search-item lng-applicant" routerLink="/applicant" routerLinkActive='active'>Դիմորդ</li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a class="lng-news">Նորություններ</a>
+            <ul>
+                <li class="search-item lng-opportunities" routerLink="/error" routerLinkActive='active'>Նոր
+                    հնարավորություններ, նոր հեռանկարներ</li>
+                <li class="search-item lng-distance_learning" routerLink="/distance-learning" routerLinkActive='active'>
+                    Հեռավար ուսուցում</li>
+                <li class="search-item lng-college_life" routerLink="/incollege-life" routerLinkActive='active'>
+                    Ներքոլեջային կյանք</li>
+                <li class="search-item lng-foreign_lang" routerLink="/foreign-lang" routerLinkActive='active'>Օտարալեզու
+                    տեղեկատվական նյութեր</li>
+            </ul>
+        </li>
+        <!-- <a class="search-item lng-announcement" routerLink="/announcement" routerLinkActive='active'>Հայտարարություն</a> -->
+        <li class="dropdown">
+            <a class="lng-staff">Աշխատակազմ</a>
+            <ul>
+                <li class="search-item lng-director" routerLink="/director" routerLinkActive='active'>Տնօրեն</li>
+                <li class="search-item lng-admin_staff" routerLink="/administrative" routerLinkActive='active'>Վարչական
+                    անձնակազմ</li>
+                <li class="search-item lng-co_workers" routerLink="/co-workers" routerLinkActive='active'>Աշխատակիցներ
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a class="lng-structur_subd">Կառուցվածքային ստորաբաժանումներ</a>
+            <ul>
+                <li class="search-item lng-board_directors" routerLink="/board-director" routerLinkActive='active'>
+                    Կառավարման խորհուրդ</li>
+                <li class="search-item lng-board_directors2" routerLink="/director-board" routerLinkActive='active'>
+                    Տնօրինական խորհուրդ</li>
+                <li class="search-item lng-edu_method_advice" routerLink="/edumethod-board" routerLinkActive='active'>
+                    Ուսումնամեթոդական խորհուրդ</li>
+                <li class="search-item lng-board_edu" routerLink="/education-board" routerLinkActive='active'>
+                    Դաստիարակչական խորհուրդ</li>
+                <li class="search-item lng-student_council" routerLink="/student-board" routerLinkActive='active'>
+                    Ուսանողական խորհուրդ</li>
+                <li class="search-item lng-editorial_board" routerLink="/editorial-board" routerLinkActive='active'>
+                    Խմբագրական խորհուրդ</li>
+                <li class="search-item lng-subj_commis" routerLink="/subject-board" routerLinkActive='active'>
+                    Առարկայական հանձնաժողովներ</li>
+                <li class="search-item lng-career_center" routerLink="/career-center" routerLinkActive='active'>
+                    Կարիերայի կենտրոն</li>
+                <li class="search-item lng-library" routerLink="/library" routerLinkActive='active'>Գրադարան</li>
+                <li class="search-item lng-pedag_council" routerLink="/teachers" routerLinkActive='active'>Մանկավարժական
+                    խորհուրդ</li>
+                <li class="search-item lng-working_groups" routerLink="/work-group" routerLinkActive='active'>
+                    Աշխատանքային խմբեր</li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a class="lng-docs">Փաստաթղթեր</a>
+            <ul>
+                <li class="dropdown">
+                    <a class="lng-contracts">Պայմանագրեր</a>
+                    <ul>
+                        <li class="search-item lng-with_student" routerLink="/contract-student"
+                            routerLinkActive='active'>Ուսանողի հետ</li>
+                        <li class="search-item lng-with_univer" routerLink="/contract-univer" routerLinkActive='active'>
+                            Բուհերի հետ</li>
+                        <li class="search-item lng-with_employ" routerLink="/contract-employers"
+                            routerLinkActive='active'>Գործատուների հետ</li>
+                        <li class="search-item lng-with_organization" routerLink="/contract-organization"
+                            routerLinkActive='active'>Միջազգային կառույցների հետ</li>
+                    </ul>
+                </li>
+                <li class="search-item lng-charter" routerLink="/charter" routerLinkActive='active'>Կանոնադրություն</li>
+                <li class="search-item lng-strategic_plans" routerLink="/stratedic-plan" routerLinkActive='active'>
+                    Ռազմավարական ծրագրեր</li>
+                <li class="search-item lng-regulation" routerLink="/regulations" routerLinkActive='active'>Կանոնակարգեր,
+                    աշխատակարգեր և ընթացակարգեր</li>
+                <li class="search-item lng-laws" routerLink="/laws" routerLinkActive='active'>Օրենքներ, հրամաններ և
+                    որոշումներ</li>
+                <li class="search-item lng-reports" routerLink="/reports" routerLinkActive='active'>Հաշվետվություններ
+                </li>
+            </ul>
+        </li>
+        <a href="#" class="search-item lng-quality" routerLink="/quality" routerLinkActive='active'>Որակի ապահովում</a>
+        <a href="#" class="search-item lng-feedback" routerLink='/feedback' routerLinkActive='active'>Հետադարձ կապ</a>
+    </div>
+</nav>
